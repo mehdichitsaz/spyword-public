@@ -41,6 +41,6 @@ Then open:
 
 ## Maintenance Notes
 
-- Keep contact email consistent across pages: `chitsaz.mehdi77@gmail.com`.
+- Keep contact email consistent across pages: `spyword.app@gmail.com`.
 - Keep support/privacy paths stable (`/support/` and `/privacy/`) so store metadata links remain valid.
 - Keep pages static and lightweight (no heavy frameworks) for reliability and fast load times.
