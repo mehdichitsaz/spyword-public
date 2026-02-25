@@ -1,18 +1,227 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SpyWord Support</title>
-<style>body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 16px;line-height:1.6}h1,h2{line-height:1.25}</style>
-</head><body>
-<h1>SpyWord Support</h1>
-<p>Need help with SpyWord? We're here to help.</p>
-<h2>Contact</h2>
-<p>Email: <strong>chitsaz.mehdi77@gmail.com</strong></p>
-<h2>App Information</h2>
-<ul>
-  <li>App name: SpyWord</li>
-  <li>Platform: iOS</li>
-  <li>Purpose: Social deduction party game support and troubleshooting</li>
-</ul>
-<h2>Apple Review Note</h2>
-<p>This page is the official support URL for the SpyWord app listing.</p>
-</body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SpyWord Support</title>
+    <meta name="description" content="Official support page for SpyWord on iOS." />
+    <style>
+      :root {
+        --bg: #060911;
+        --bg-soft: #0b1220;
+        --surface: rgba(13, 22, 40, 0.82);
+        --surface-2: rgba(10, 16, 31, 0.8);
+        --text: #e8f0ff;
+        --muted: #9aaacf;
+        --accent: #33f0ff;
+        --accent-2: #a855f7;
+        --border: rgba(145, 170, 225, 0.26);
+        --shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+      }
+
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+
+      body {
+        min-height: 100vh;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: var(--text);
+        line-height: 1.6;
+        background:
+          radial-gradient(circle at 8% 8%, rgba(168, 85, 247, 0.18), transparent 42%),
+          radial-gradient(circle at 92% 6%, rgba(51, 240, 255, 0.17), transparent 44%),
+          linear-gradient(180deg, #090d18 0%, #060911 100%);
+      }
+
+      a { color: var(--accent); }
+
+      .wrap {
+        width: min(1100px, 100% - 2.4rem);
+        margin: 0 auto;
+        padding: 1.2rem 0 3.4rem;
+      }
+
+      .site-header {
+        border: 1px solid var(--border);
+        background: rgba(8, 13, 25, 0.72);
+        backdrop-filter: blur(6px);
+        border-radius: 16px;
+        padding: 0.75rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .brand-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 999px;
+        background: linear-gradient(140deg, var(--accent), #84f8ff);
+        box-shadow: 0 0 16px rgba(51, 240, 255, 0.65);
+        margin-right: 0.55rem;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: var(--text);
+        font-size: 0.92rem;
+        font-weight: 600;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        padding: 0.5rem 0.72rem;
+      }
+
+      .nav-link:hover { border-color: var(--border); background: rgba(14, 21, 38, 0.65); }
+      .nav-link[aria-current="page"] { border-color: var(--border); background: rgba(14, 21, 38, 0.8); }
+
+      .hero {
+        margin-top: 1rem;
+        border: 1px solid var(--border);
+        background: linear-gradient(150deg, rgba(13, 20, 37, 0.9), rgba(10, 16, 30, 0.75));
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        padding: clamp(1.4rem, 2vw + 1rem, 2.4rem);
+      }
+
+      .badge {
+        display: inline-block;
+        margin-bottom: 0.8rem;
+        color: var(--accent);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 650;
+        font-size: 0.8rem;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+      }
+
+      h2 { font-size: clamp(1.22rem, 1.7vw, 1.5rem); margin: 1.3rem 0 0.4rem; }
+
+      p, li { color: var(--muted); }
+      strong { color: var(--text); }
+
+      .content {
+        margin-top: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--surface);
+        padding: clamp(1rem, 2.2vw, 1.5rem);
+      }
+
+      .content ul { margin-top: 0.3rem; padding-left: 1.1rem; }
+
+      .actions {
+        margin-top: 1.3rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .btn {
+        text-decoration: none;
+        font-weight: 650;
+        font-size: 0.98rem;
+        border-radius: 12px;
+        padding: 0.72rem 1.1rem;
+        transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+      }
+
+      .btn:hover { transform: translateY(-1px); }
+
+      .btn-primary {
+        color: #03111b;
+        background: linear-gradient(140deg, var(--accent), #6ef6ff);
+        box-shadow: 0 8px 20px rgba(51, 240, 255, 0.3);
+      }
+
+      .btn-secondary {
+        color: var(--text);
+        background: rgba(13, 18, 34, 0.85);
+        border: 1px solid var(--border);
+      }
+
+      .site-footer {
+        margin-top: 1.4rem;
+        border-top: 1px solid rgba(133, 155, 205, 0.2);
+        padding-top: 1rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 700px) {
+        .wrap { width: min(100% - 1.2rem, 1100px); }
+        .site-header { align-items: flex-start; flex-direction: column; }
+        .btn { width: 100%; text-align: center; }
+      }
+
+      @media (max-width: 620px) {
+        .hero { border-radius: 18px; padding: 1.2rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="site-header" aria-label="Site navigation">
+        <a class="brand" href="/spyword-public/"><span class="brand-dot" aria-hidden="true"></span>SpyWord</a>
+        <nav class="nav">
+          <a class="nav-link" href="/spyword-public/">Home</a>
+          <a class="nav-link" href="/spyword-public/support/" aria-current="page">Support</a>
+          <a class="nav-link" href="/spyword-public/privacy/">Privacy</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <span class="badge">Official support</span>
+        <h1>SpyWord Support</h1>
+      </section>
+
+      <section class="content" aria-label="Support details">
+        <p>Need help with SpyWord? We're here to help.</p>
+
+        <h2>Contact</h2>
+        <p>Email: <strong><a href="mailto:chitsaz.mehdi77@gmail.com">chitsaz.mehdi77@gmail.com</a></strong></p>
+
+        <h2>App Information</h2>
+        <ul>
+          <li>App name: SpyWord</li>
+          <li>Platform: iOS</li>
+          <li>Purpose: Social deduction party game support and troubleshooting</li>
+        </ul>
+
+        <h2>Apple Review Note</h2>
+        <p>This page is the official support URL for the SpyWord app listing.</p>
+
+        <div class="actions" aria-label="Page links">
+          <a class="btn btn-secondary" href="/spyword-public/">Back to Home</a>
+          <a class="btn btn-primary" href="/spyword-public/privacy/">Read Privacy Policy</a>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        Need help? Contact us at <a href="mailto:chitsaz.mehdi77@gmail.com">chitsaz.mehdi77@gmail.com</a>.
+      </footer>
+    </main>
+  </body>
+</html>
