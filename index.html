@@ -1,12 +1,230 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SpyWord - Public Information</title>
-<style>body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 16px;line-height:1.6}a{color:#0a66c2}</style>
-</head><body>
-<h1>SpyWord</h1>
-<p>Official public information pages for the SpyWord mobile app.</p>
-<ul>
-  <li><a href="/support/">Support</a></li>
-  <li><a href="/privacy/">Privacy Policy</a></li>
-</ul>
-</body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SpyWord — Official Public Pages</title>
+    <meta
+      name="description"
+      content="SpyWord is a fast social deduction party game for iOS. Find support, privacy information, and app details."
+    />
+    <style>
+      :root {
+        --bg: #070a13;
+        --bg-soft: #0d1222;
+        --card: rgba(18, 27, 48, 0.7);
+        --text: #e9f0ff;
+        --muted: #98a6c9;
+        --accent: #33f0ff;
+        --accent-2: #a855f7;
+        --border: rgba(133, 155, 205, 0.25);
+        --shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+          sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 10% 10%, rgba(168, 85, 247, 0.2), transparent 40%),
+          radial-gradient(circle at 90% 5%, rgba(51, 240, 255, 0.2), transparent 42%),
+          linear-gradient(180deg, #080b16 0%, #060910 100%);
+        line-height: 1.6;
+      }
+
+      .wrap {
+        width: min(1100px, 100% - 2.5rem);
+        margin: 0 auto;
+        padding: 3.25rem 0 4rem;
+      }
+
+      .hero {
+        border: 1px solid var(--border);
+        background: linear-gradient(150deg, rgba(13, 20, 37, 0.85), rgba(11, 17, 31, 0.7));
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        padding: clamp(1.5rem, 2vw + 1rem, 3rem);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(120deg, transparent 20%, rgba(51, 240, 255, 0.08), transparent 70%);
+      }
+
+      .badge {
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: var(--accent);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 650;
+        font-size: 0.8rem;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 3.7rem);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+      }
+
+      .tagline {
+        margin: 0.95rem 0 0;
+        max-width: 700px;
+        color: var(--muted);
+        font-size: clamp(1.03rem, 1.25vw, 1.16rem);
+      }
+
+      .actions {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .btn {
+        text-decoration: none;
+        font-weight: 650;
+        font-size: 0.98rem;
+        border-radius: 12px;
+        padding: 0.72rem 1.1rem;
+        transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+      }
+
+      .btn-primary {
+        color: #03111b;
+        background: linear-gradient(140deg, var(--accent), #6ef6ff);
+        box-shadow: 0 8px 20px rgba(51, 240, 255, 0.3);
+      }
+
+      .btn-secondary {
+        color: var(--text);
+        background: rgba(13, 18, 34, 0.85);
+        border: 1px solid var(--border);
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .features {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 0.95rem;
+      }
+
+      .feature {
+        grid-column: span 4;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--card);
+        backdrop-filter: blur(3px);
+        padding: 1rem 1rem 1.1rem;
+      }
+
+      .feature h2 {
+        margin: 0;
+        font-size: 1.03rem;
+      }
+
+      .feature p {
+        margin: 0.55rem 0 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .footer {
+        margin-top: 1.25rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .footer a {
+        color: var(--accent);
+      }
+
+      @media (max-width: 900px) {
+        .feature {
+          grid-column: span 6;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .wrap {
+          width: min(100% - 1.25rem, 1100px);
+          padding-top: 1.2rem;
+          padding-bottom: 2.2rem;
+        }
+
+        .hero {
+          border-radius: 18px;
+          padding: 1.2rem;
+        }
+
+        .feature {
+          grid-column: span 12;
+        }
+
+        .btn {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <span class="badge">Official public pages</span>
+        <h1>SpyWord</h1>
+        <p class="tagline">
+          A fast social deduction party game for iOS — bluff smart, read the room, and expose the spy.
+        </p>
+
+        <div class="actions" aria-label="Primary links">
+          <a class="btn btn-primary" href="/support/">Support</a>
+          <a class="btn btn-secondary" href="/privacy/">Privacy Policy</a>
+        </div>
+      </section>
+
+      <section class="features" aria-label="SpyWord features">
+        <article class="feature">
+          <h2>Quick rounds</h2>
+          <p>Jump into short, high-energy rounds that work perfectly for parties and group hangouts.</p>
+        </article>
+
+        <article class="feature">
+          <h2>Social deduction gameplay</h2>
+          <p>Use clues, strategy, and bluffing to spot the spy before the room turns on you.</p>
+        </article>
+
+        <article class="feature">
+          <h2>Built for pass-and-play</h2>
+          <p>Designed for local sessions so everyone can play together on a single iOS device.</p>
+        </article>
+      </section>
+
+      <p class="footer">
+        Need help? Contact us at
+        <a href="mailto:chitsaz.mehdi77@gmail.com">chitsaz.mehdi77@gmail.com</a>.
+      </p>
+    </main>
+  </body>
+</html>
