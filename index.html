@@ -229,6 +229,13 @@
         border: 1px solid var(--border);
       }
 
+      .appstore-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        flex-wrap: wrap;
+      }
+
       .appstore-badge {
         display: inline-flex;
         align-items: center;
@@ -282,6 +289,33 @@
         font-size: 1.24rem;
         font-weight: 650;
         letter-spacing: 0.01em;
+      }
+
+      .review-cta {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 650;
+        font-size: 0.94rem;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 0.82rem 1rem;
+        background: rgba(13, 18, 34, 0.85);
+        min-height: 56px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+      }
+
+      .review-cta:hover {
+        transform: translateY(-1px);
+        border-color: rgba(165, 190, 240, 0.45);
+        background: rgba(17, 25, 46, 0.92);
+      }
+
+      .review-cta:focus-visible {
+        outline: 3px solid rgba(51, 240, 255, 0.72);
+        outline-offset: 3px;
       }
 
       .grid {
@@ -458,6 +492,18 @@
         padding-top: 1rem;
         color: var(--muted);
         font-size: 0.92rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.6rem 1rem;
+      }
+
+      .footer-review-link {
+        color: var(--accent);
+        font-weight: 600;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0.18em;
       }
 
       @media (min-width: 901px) {
@@ -476,8 +522,11 @@
         .appstore-cta { align-items: stretch; }
         .appstore-copy { min-width: 100%; }
         .appstore-note { width: 100%; }
-        .appstore-badge { width: 100%; justify-content: center; }
+        .appstore-actions { width: 100%; }
+        .appstore-badge,
+        .review-cta { width: 100%; justify-content: center; }
         .btn { width: 100%; text-align: center; }
+        .site-footer { flex-direction: column; align-items: flex-start; }
       }
 
       @media (max-width: 620px) {
@@ -506,22 +555,33 @@
         </nav>
       </header>
 
-      <section class="appstore-cta" aria-label="App Store download prompt">
+      <section class="appstore-cta" aria-label="App Store download and rating prompt">
         <div class="appstore-copy">
           <p class="appstore-kicker">Now on iPhone</p>
-          <p class="appstore-note">Get SpyWord on the App Store.</p>
+          <p class="appstore-note">Get SpyWord on the App Store and help us grow with a quick rating.</p>
         </div>
-        <a
-          class="appstore-badge"
-          href="https://apps.apple.com/us/app/spyword-whos-the-spy/id6759678325"
-          aria-label="Download SpyWord on the App Store"
-        >
-          <img class="appstore-icon" src="./assets/apple-logo.svg" alt="" aria-hidden="true" />
-          <span class="appstore-label">
-            <small>Download on the</small>
-            <strong>App Store</strong>
-          </span>
-        </a>
+        <div class="appstore-actions">
+          <a
+            class="appstore-badge"
+            href="https://apps.apple.com/us/app/spyword-whos-the-spy/id6759678325"
+            aria-label="Download SpyWord on the App Store"
+          >
+            <img class="appstore-icon" src="./assets/apple-logo.svg" alt="" aria-hidden="true" />
+            <span class="appstore-label">
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </span>
+          </a>
+          <a
+            class="review-cta"
+            href="https://apps.apple.com/us/app/spyword-whos-the-spy/id6759678325?action=write-review"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Rate SpyWord on the App Store (opens review page in a new tab)"
+          >
+            Rate us on the App Store
+          </a>
+        </div>
       </section>
 
       <section class="hero">
@@ -602,7 +662,16 @@
       </section>
 
       <footer class="site-footer">
-        Need help? Contact us at <a href="mailto:spyword.app@gmail.com">spyword.app@gmail.com</a>.
+        <span>Need help? Contact us at <a href="mailto:spyword.app@gmail.com">spyword.app@gmail.com</a>.</span>
+        <a
+          class="footer-review-link"
+          href="https://apps.apple.com/us/app/spyword-whos-the-spy/id6759678325?action=write-review"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Rate SpyWord on the App Store review page (opens in a new tab)"
+        >
+          Enjoying SpyWord? Rate us ★
+        </a>
       </footer>
     </main>
     <script>
