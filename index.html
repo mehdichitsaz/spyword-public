@@ -359,13 +359,16 @@
       }
 
       .screenshots p {
-        margin: 0 0 0.9rem;
+        margin: 0 0 1rem;
         color: var(--muted);
         font-size: 0.95rem;
+        line-height: 1.45;
       }
 
       .shots-carousel {
         position: relative;
+        width: min(100%, 420px);
+        margin-inline: auto;
       }
 
       .shots-viewport {
@@ -452,6 +455,11 @@
         padding-top: 1rem;
         color: var(--muted);
         font-size: 0.92rem;
+      }
+
+      @media (min-width: 901px) {
+        .shots-control.prev { left: -0.95rem; }
+        .shots-control.next { right: -0.95rem; }
       }
 
       @media (max-width: 900px) {
