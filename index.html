@@ -205,6 +205,47 @@
         font-size: 0.95rem;
       }
 
+
+
+      .screenshots {
+        margin-top: 1.4rem;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--surface-2);
+        padding: 1rem;
+      }
+
+      .screenshots h2 {
+        margin-bottom: 0.35rem;
+      }
+
+      .screenshots p {
+        margin: 0 0 0.9rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .shots-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+
+      .shot {
+        margin: 0;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+        background: rgba(8, 12, 22, 0.82);
+      }
+
+      .shot img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 9 / 19.5;
+        object-fit: cover;
+      }
       .site-footer {
         margin-top: 1.4rem;
         border-top: 1px solid rgba(133, 155, 205, 0.2);
@@ -215,6 +256,7 @@
 
       @media (max-width: 900px) {
         .card { grid-column: span 6; }
+        .shots-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       }
 
       @media (max-width: 700px) {
@@ -232,6 +274,8 @@
           border-radius: 12px;
         }
         .card { grid-column: span 12; }
+        .screenshots { padding: 0.85rem; }
+        .shots-grid { grid-template-columns: 1fr; }
       }
     </style>
   </head>
@@ -279,6 +323,21 @@
           <h2>Built for pass-and-play</h2>
           <p>Designed for local sessions so everyone can play together on a single iOS device.</p>
         </article>
+      </section>
+
+      <section class="screenshots" aria-label="SpyWord screenshots">
+        <h2>In-game screenshots</h2>
+        <p>A quick look at SpyWord on iPhone.</p>
+        <div class="shots-grid">
+          <figure class="shot"><img src="./assets/screenshots/iphone-01.png?v=20260227" alt="SpyWord screenshot 1" loading="lazy" /></figure>
+          <figure class="shot"><img src="./assets/screenshots/iphone-02.png?v=20260227" alt="SpyWord screenshot 2" loading="lazy" /></figure>
+          <figure class="shot"><img src="./assets/screenshots/iphone-03.png?v=20260227" alt="SpyWord screenshot 3" loading="lazy" /></figure>
+          <figure class="shot"><img src="./assets/screenshots/iphone-04.png?v=20260227" alt="SpyWord screenshot 4" loading="lazy" /></figure>
+          <figure class="shot"><img src="./assets/screenshots/iphone-05.png?v=20260227" alt="SpyWord screenshot 5" loading="lazy" /></figure>
+          <figure class="shot"><img src="./assets/screenshots/iphone-06.png?v=20260227" alt="SpyWord screenshot 6" loading="lazy" /></figure>
+          <figure class="shot"><img src="./assets/screenshots/iphone-07.png?v=20260227" alt="SpyWord screenshot 7" loading="lazy" /></figure>
+          <figure class="shot"><img src="./assets/screenshots/iphone-08.png?v=20260227" alt="SpyWord screenshot 8" loading="lazy" /></figure>
+        </div>
       </section>
 
       <footer class="site-footer">
