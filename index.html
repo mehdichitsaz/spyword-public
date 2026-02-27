@@ -93,6 +93,26 @@
       .nav-link:hover { border-color: var(--border); background: rgba(14, 21, 38, 0.65); }
       .nav-link[aria-current="page"] { border-color: var(--border); background: rgba(14, 21, 38, 0.8); }
 
+      .appstore-cta {
+        margin-top: 1rem;
+        border: 1px solid var(--border);
+        background: rgba(8, 13, 25, 0.72);
+        backdrop-filter: blur(6px);
+        border-radius: 16px;
+        padding: 0.9rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+      }
+
+      .appstore-note {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
       .hero {
         margin-top: 1rem;
         border: 1px solid var(--border);
@@ -170,6 +190,12 @@
       }
 
       .btn:hover { transform: translateY(-1px); }
+
+      .btn:focus-visible {
+        outline: 3px solid rgba(51, 240, 255, 0.7);
+        outline-offset: 3px;
+        box-shadow: 0 0 0 6px rgba(51, 240, 255, 0.18);
+      }
 
       .btn-primary {
         color: #03111b;
@@ -323,6 +349,8 @@
       @media (max-width: 700px) {
         .wrap { width: min(100% - 1.2rem, 1100px); }
         .site-header { align-items: flex-start; flex-direction: column; }
+        .appstore-cta { align-items: stretch; }
+        .appstore-note { width: 100%; }
         .btn { width: 100%; text-align: center; }
       }
 
@@ -350,6 +378,17 @@
           <a class="nav-link" href="/spyword-public/privacy/">Privacy</a>
         </nav>
       </header>
+
+      <section class="appstore-cta" aria-label="App Store download prompt">
+        <a
+          class="btn btn-primary"
+          href="https://example.com/app-store-link"
+          aria-label="Download SpyWord on the App Store (placeholder link)"
+        >
+          Download on the App Store
+        </a>
+        <p class="appstore-note">App Store link coming soon.</p>
+      </section>
 
       <section class="hero">
         <div class="hero-top">
