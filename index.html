@@ -333,10 +333,10 @@
 
       .promo-video-frame video {
         display: block;
-        width: 100%;
+        width: min(100%, 420px);
         height: auto;
-        aspect-ratio: 16 / 9;
         max-height: min(70vh, 760px);
+        margin-inline: auto;
         background: #000;
       }
 
@@ -554,8 +554,12 @@
         <figure class="promo-video-frame">
           <video
             controls
+            autoplay
+            loop
+            muted
             preload="metadata"
             playsinline
+            webkit-playsinline="true"
             poster="./assets/screenshots/iphone-01.png?v=20260227"
           >
             <source src="./assets/media/spyword-promo.mp4?v=20260227" type="video/mp4" />
