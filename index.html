@@ -63,15 +63,14 @@
         color: var(--text);
         font-weight: 700;
         letter-spacing: 0.02em;
+        gap: 0.55rem;
       }
 
-      .brand-dot {
-        width: 9px;
-        height: 9px;
-        border-radius: 999px;
-        background: linear-gradient(140deg, var(--accent), #84f8ff);
-        box-shadow: 0 0 16px rgba(51, 240, 255, 0.65);
-        margin-right: 0.55rem;
+      .brand-logo {
+        width: 22px;
+        height: 22px;
+        border-radius: 6px;
+        box-shadow: 0 0 18px rgba(51, 240, 255, 0.32);
       }
 
       .nav {
@@ -113,9 +112,24 @@
         background: linear-gradient(120deg, transparent 20%, rgba(51, 240, 255, 0.07), transparent 70%);
       }
 
+      .hero-top {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .hero-logo {
+        width: clamp(56px, 8vw, 76px);
+        height: clamp(56px, 8vw, 76px);
+        border-radius: 16px;
+        box-shadow: 0 12px 26px rgba(0, 0, 0, 0.4), 0 0 22px rgba(51, 240, 255, 0.22);
+        flex-shrink: 0;
+      }
+
       .badge {
         display: inline-block;
-        margin-bottom: 1rem;
+        margin-bottom: 0.15rem;
         color: var(--accent);
         letter-spacing: 0.08em;
         text-transform: uppercase;
@@ -211,6 +225,12 @@
 
       @media (max-width: 620px) {
         .hero { border-radius: 18px; padding: 1.2rem; }
+        .hero-top { gap: 0.65rem; }
+        .hero-logo {
+          width: 52px;
+          height: 52px;
+          border-radius: 12px;
+        }
         .card { grid-column: span 12; }
       }
     </style>
@@ -218,7 +238,7 @@
   <body>
     <main class="wrap">
       <header class="site-header" aria-label="Site navigation">
-        <a class="brand" href="/spyword-public/"><span class="brand-dot" aria-hidden="true"></span>SpyWord</a>
+        <a class="brand" href="/spyword-public/"><img class="brand-logo" src="./assets/spyword-logo.png" alt="SpyWord app logo" />SpyWord</a>
         <nav class="nav">
           <a class="nav-link" href="/spyword-public/" aria-current="page">Home</a>
           <a class="nav-link" href="/spyword-public/support/">Support</a>
@@ -227,8 +247,13 @@
       </header>
 
       <section class="hero">
-        <span class="badge">Official public pages</span>
-        <h1>SpyWord</h1>
+        <div class="hero-top">
+          <img class="hero-logo" src="./assets/spyword-logo.png" alt="SpyWord app logo" />
+          <div>
+            <span class="badge">Official public pages</span>
+            <h1>SpyWord</h1>
+          </div>
+        </div>
         <p class="lead">
           A fast social deduction party game for iOS — bluff smart, read the room, and expose the spy.
         </p>
