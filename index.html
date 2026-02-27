@@ -305,6 +305,47 @@
 
 
 
+      .promo-video {
+        margin-top: 1.4rem;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--surface-2);
+        padding: 1rem;
+      }
+
+      .promo-video h2 {
+        margin-bottom: 0.35rem;
+      }
+
+      .promo-video p {
+        margin: 0 0 0.9rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .promo-video-frame {
+        margin: 0;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+        background: rgba(8, 12, 22, 0.82);
+      }
+
+      .promo-video-frame video {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        max-height: min(70vh, 760px);
+        background: #000;
+      }
+
+      .promo-video-caption {
+        margin-top: 0.75rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
       .screenshots {
         margin-top: 1.4rem;
         border: 1px solid var(--border);
@@ -437,6 +478,7 @@
           border-radius: 12px;
         }
         .card { grid-column: span 12; }
+        .promo-video { padding: 0.85rem; }
         .screenshots { padding: 0.85rem; }
         .shots-control { width: 1.9rem; height: 1.9rem; }
       }
@@ -504,6 +546,23 @@
           <h2>Built for pass-and-play</h2>
           <p>Designed for local sessions so everyone can play together on a single iOS device.</p>
         </article>
+      </section>
+
+      <section class="promo-video" aria-label="SpyWord promo video">
+        <h2>Promo Video</h2>
+        <p>Watch SpyWord in action.</p>
+        <figure class="promo-video-frame">
+          <video
+            controls
+            preload="metadata"
+            playsinline
+            poster="./assets/screenshots/iphone-01.png?v=20260227"
+          >
+            <source src="./assets/media/spyword-promo.mp4?v=20260227" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption class="promo-video-caption">Official App Store promo video.</figcaption>
+        </figure>
       </section>
 
       <section class="screenshots" aria-label="SpyWord screenshots">
