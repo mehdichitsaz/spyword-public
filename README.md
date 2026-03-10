@@ -10,11 +10,18 @@ Modern public-facing web pages for **SpyWord** (iOS), including the official **S
 
 ## Purpose
 
-This repository hosts lightweight static pages for:
+This repository hosts lightweight static pages and public release notes for:
 
 - presenting SpyWord publicly with a polished landing page,
 - providing the official support destination,
-- publishing the official privacy policy.
+- publishing the official privacy policy,
+- documenting high-level product updates that are safe to share publicly.
+
+## Latest Public Update
+
+- **Version:** 1.2.0
+- **Highlights:** new category content, localization polish, iOS premium UI improvements, and App Store submission/readiness fixes.
+- **Details:** see [`CHANGELOG.md`](./CHANGELOG.md).
 
 ## Local Preview
 

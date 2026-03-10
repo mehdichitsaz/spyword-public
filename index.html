@@ -318,8 +318,31 @@
         outline-offset: 3px;
       }
 
+      .release-notes {
+        margin-top: 1.4rem;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--surface-2);
+        padding: 1rem;
+      }
+
+      .release-notes h2 {
+        margin-bottom: 0.35rem;
+      }
+
+      .release-notes p,
+      .release-notes li {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .release-notes ul {
+        margin: 0.45rem 0 0;
+        padding-left: 1.1rem;
+      }
+
       .grid {
-        margin-top: 1.9rem;
+        margin-top: 1.2rem;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         gap: 0.95rem;
@@ -600,6 +623,20 @@
           <a class="btn btn-primary" href="/spyword-public/support/">Support</a>
           <a class="btn btn-secondary" href="/spyword-public/privacy/">Privacy Policy</a>
         </div>
+      </section>
+
+      <section class="release-notes" aria-label="Latest release notes">
+        <h2>Latest update: version 1.2.0</h2>
+        <p>Recent public-facing improvements include:</p>
+        <ul>
+          <li>New category additions for more replay variety.</li>
+          <li>Localization polish for a cleaner multilingual experience.</li>
+          <li>Premium iOS UI refinements for visual consistency and smoother flow.</li>
+          <li>App Store submission/readiness fixes and metadata polish.</li>
+        </ul>
+        <p>
+          Full public notes: <a href="https://github.com/mehdichitsaz/spyword-public/blob/main/CHANGELOG.md">CHANGELOG.md</a>
+        </p>
       </section>
 
       <section class="grid" aria-label="SpyWord features">
