@@ -7,7 +7,6 @@ Modern public-facing web pages for **SpyWord** (iOS), including the official **S
 - Home: https://mehdichitsaz.github.io/spyword-public/
 - Support: https://mehdichitsaz.github.io/spyword-public/support/
 - Privacy Policy: https://mehdichitsaz.github.io/spyword-public/privacy/
-- app-ads.txt: https://mehdichitsaz.github.io/spyword-public/app-ads.txt
 
 ## Purpose
 
@@ -53,12 +52,3 @@ Then open:
 - Keep support/privacy paths stable (`/support/` and `/privacy/`) so store metadata links remain valid.
 - Keep pages static and lightweight (no heavy frameworks) for reliability and fast load times.
 
-## AdMob app-ads.txt
-
-- File path in repo: `app-ads.txt`
-- Current line (must remain exact):
-  `google.com, pub-7251371733383885, DIRECT, f08c47fec0942fa0`
-- Current public URL on this project site:
-  `https://mehdichitsaz.github.io/spyword-public/app-ads.txt`
-
-> Note: If App Store Connect's **Developer Website** uses a different domain, app-ads.txt must be reachable at that domain root (`https://<domain>/app-ads.txt`).
